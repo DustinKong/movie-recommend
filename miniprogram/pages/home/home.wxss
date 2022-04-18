@@ -1,0 +1,7 @@
+/* pages/home/home.wxss */
+.pic{
+  height: 400rpx;
+}
+.title{
+  top: 700rpx;
+}
