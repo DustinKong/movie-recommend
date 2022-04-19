@@ -17,7 +17,8 @@
     "pages/sumRecord/index",
     "pages/sumRecordResult/index",
     "pages/movieList/movieList",
-    "pages/test/test"
+    "pages/rec/rec",
+    "pages/detail/detail"
   ],
   "tabBar": {
     "selectedColor": "#0000dd",
