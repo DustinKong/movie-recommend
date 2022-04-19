@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showList:[]
+    showList:[],
+    current:0
   },
 
   /**
@@ -20,9 +21,9 @@ Page({
       data: {
       },
       success: function (res) {
-        console.log(res.result.data);
+        console.log(res.result.list);
         that.setData({
-          showList:res.result.data
+          showList:res.result.list
         })
       },
       fail: console.error
@@ -40,9 +41,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
-
+  nextImg(){
+    let that=this
+    let cur = this.data.current
+    this.data.current = cur < 9 ? cur + 1 : 9;
+    that.setData({
+      current:this.data.current
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

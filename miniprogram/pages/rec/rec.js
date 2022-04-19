@@ -1,11 +1,12 @@
-// pages/home/home.js
+// pages/rec/rec.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showList:[]
+    showList:[],
+    current:0
   },
 
   /**
@@ -28,14 +29,11 @@ Page({
       fail: console.error
     })
   },
-  golist:function(){
+  getid:function(id){
+    let movie_id = id.currentTarget.dataset.movie_id
+    // console.log(movie_id)
     wx.navigateTo({
-      url: '/pages/movieList/movieList',
-    })
-  },
-  gorec:function(){
-    wx.navigateTo({
-      url: '/pages/rec/rec',
+      url: '/pages/detail/detail?movie_id='+ movie_id,
     })
   },
   /**
@@ -49,9 +47,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
