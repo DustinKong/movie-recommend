@@ -10,6 +10,6 @@
 </swiper>
 
 <view class="padding flex flex-direction justify-between ">
-  <button class="cu-btn bg-blue lg">推荐</button>
-  <button class="cu-btn bg-red margin-tb-sm lg">电影榜单</button>
+  <button class="cu-btn bg-red margin-tb-sm lg" bindtap="golist">测试喜好</button>
+  <button class="cu-btn bg-blue lg" bindtap="gorecommend">推荐</button>
 </view>

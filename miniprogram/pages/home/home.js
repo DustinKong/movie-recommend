@@ -20,15 +20,19 @@ Page({
       data: {
       },
       success: function (res) {
-        console.log(res.result.data);
+        console.log(res.result.list);
         that.setData({
-          showList:res.result.data
+          showList:res.result.list
         })
       },
       fail: console.error
     })
   },
-
+  golist:function(){
+    wx.navigateTo({
+      url: '/pages/movieList/movieList',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
